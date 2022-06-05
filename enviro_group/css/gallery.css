@@ -1,0 +1,168 @@
+/* Import fonts from local files */
+@font-face{
+	font-family: "alata";
+	src: url("../fonts/Alata-Regular.ttf");
+	}
+
+@font-face{
+	font-family: "quicksand";
+	src: url("../fonts/Quicksand-Regular.ttf");
+}
+
+/* Basic positioning of the gallery page. Most measurements on this page are in percentage or view width - this means I can have the gallery take up most of the screen but not break if a user changes the screen size */
+html{
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+	margin: auto;
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+body{
+	padding: 20px;
+	width: 90%;
+	max-width: 1500px;
+	border: solid;
+	border-width: 2px;
+	background-color: #FFFFFF;
+}
+
+/* Formatting for the header. The header contains a link back to the home page */
+header{
+	font-family: "quicksand";
+}
+
+header> a{
+	display: flex;
+	position: relative;
+	text-decoration: none;
+	color: #000000;
+	padding: 0px;
+	margin: 2.5vw 0px 0px 5vw;
+	width: 35vw;
+}
+
+/* Formatting for the arrow. This translates left when the link is hovered over */
+header> a> p{
+	position: relative;
+	left: 30px;
+	margin: 0px;
+	font-size: 3vw;
+	transition-property: left;
+	transition-duration: 0.5s;
+}
+
+header> a> h1{
+	position: absolute;
+	left: 60px;
+	font-size: 3vw;
+	margin: 2px 0px 0px 0px;
+}
+
+header> a:hover> p{
+	left: 0px;
+}
+
+/* Formatting for the main. This contains the images */
+main{
+	font-family: "alata";
+	margin-top: 5vw;
+	margin-bottom: 3vw;
+}
+
+/* Formatting for every image is the same. This makes it easy to add more */
+/* Each image has a div that it is centered in. The divs do not show overflow which is what allows me to format all images to the same size while maintaining aspect ratio */
+main> div{
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 15vw;
+	width: 30%;
+	margin-left: 2.5%;
+	margin-bottom: 1vw;
+	overflow: hidden;
+	float: left;
+}
+
+/* Images that are shown all the time */
+.show{
+	display: flex;
+}
+
+/* Images that are shown when a user clicks on the show more button. This section uses javascript */
+.showMore{
+	display: none;
+}
+
+main> div> img{
+	width: 100%;
+}
+
+/* Formatting for the image captions. These appear when the image is hovered over using a transition */
+main> div> p{
+	display: flex;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background-color: #FFFFFF7F;
+	height: 20%;
+	opacity: 0;
+	margin: 0px;
+	padding-left: 10%;
+	align-items: center;
+	font-size: 1vw;
+	transition-property: opacity;
+	transition-duration: 0.5s;
+}
+
+main> div:hover> p{
+	opacity: 1;
+}
+
+/* Formatting for the footer. This contains copyright information and buttons for showing more images and returning to the hom page */
+footer{
+	font-family: "alata";
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+/* Formatting for the copyright info */
+footer> p{
+	position: absolute;
+	left: 4vw;
+	font-size: 0.9vw;
+	cursor: default;
+}
+
+/* Formatting for the two buttons. They change colour on hover */
+.button{
+	display: flex;
+	cursor: pointer;
+	background-color: #D3D3D3;
+	margin-left: 2vw;
+	margin-right: 2vw;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	border-radius: 3vw;
+	border: solid;
+	border-color: #000000;
+	border-width: 0.1vw;
+	text-decoration: none;
+	color: #000000;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+}
+
+.button> p{
+	font-size: 1.1vw;
+}
+
+.button:hover{
+	background-color: #C0C0C0;
+}

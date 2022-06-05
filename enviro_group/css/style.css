@@ -1,0 +1,800 @@
+/* Import fonts from local files */
+@font-face{
+	font-family: "alata";
+	src: url("../fonts/Alata-Regular.ttf");
+	}
+
+@font-face{
+	font-family: "quicksand";
+	src: url("../fonts/Quicksand-Regular.ttf");
+}
+
+/* Basic positioning for every page */
+html{
+	padding: 30px;
+	width: 1000px;
+	margin: auto;
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+body{
+	width: 960px;
+	padding: 20px;
+	margin: 0px;
+	background-color: #FFFFFF;
+}
+
+/* Basic formatting for every paragraph and heading */
+p{
+	font-family: "alata";
+	color: #000000;
+	text-align: justify;
+}
+
+h1{
+	font-family: "quicksand";
+	color: #000000;
+}
+
+h2{
+	font-family: "quicksand";
+	color: #000000;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+h3{
+	font-family: "quicksand";
+	color: #000000;
+	font-size: 22px;
+	margin: 0px 0px 0px 15px;
+}
+
+h4{
+	font-family: "quicksand";
+	color: #000000;
+	font-size: 20px;
+	margin: 0px 0px 0px 15px;
+}
+
+h5{
+	font-family: "quicksand";
+	color: #000000;
+	font-size: 18px;
+	margin: 0px 0px 0px 15px;
+}
+
+/* Formatting for the header. This is the same for every page */
+header{
+	font-family: "quicksand";
+}
+
+/* Position the image and the title */
+.headerImage{
+	position: relative;
+	height: 270px;
+	width: 960px;
+	background-image: url("../images/header_image.jpg");
+}
+
+.headerImage> a> h1{
+	position: absolute;
+	top: 35px;
+	left: 130px;
+}
+
+/* Formatting for the menu */
+.menu{
+	position: absolute;
+	padding-top: 20px;
+	padding-right: 20px;
+	width: 19px;
+	height: 19px;
+	top: -1px;
+	right: -1px;
+}
+
+/* This is the hamburger icon */
+.visible> div{
+	height: 3px;
+	width: 19px;
+	margin-bottom: 5px;
+	background-color: #000000;
+}
+
+/* Content for the menu is revealed when the hamburger icon is hovered over */
+.menuContent{
+	display: none;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	width: 525px;
+	height: 125px;
+	background-color: #33991A;
+	opacity: 0.9;
+	padding: 20px;
+	border-bottom-left-radius: 125px;
+}
+
+/* Format the quicklinks in the menu */
+.menuContent> .siteMap{
+	float: left;
+}
+
+.menuContent> .siteMap> a{
+	display: flex;
+	width: 75px;
+	margin-right: 35px;
+	height: 30px;
+	color: #000000;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.menuContent> .siteMap> a:hover{
+	text-decoration: underline;
+}
+
+.menuContent> .siteMap> ul{
+	list-style-type: none;
+	padding: 0px;
+}
+
+.menuContent> .siteMap> ul> li> a{
+	position: relative;
+	display: flex;
+	width: 130px;
+	height: 20px;
+	color: #000000;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	align-items: center;
+	text-decoration: none;
+	z-index: 1;
+}
+
+.menuContent> .siteMap> ul> li> a:hover{
+	text-decoration: underline;
+}
+
+/* Format the search box in the menu */
+.searchBox{
+	width: 175px;
+	height: 30px;
+	border: solid;
+	border-width: 1px;
+	border-color: #353535;
+	position: absolute;
+	top: 110px;
+	left: 75px;
+	background-color: #A9A9A9;
+}
+
+.searchIcon{
+	display: flex;
+	width: 30px;
+	height: 30px;
+	float: left;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-color: #FFFFFF;
+}
+
+.searchBox> input{
+	position: absolute;
+	width: 133px;
+	height: 20px;
+	float: right;
+	margin: 3px;
+	right: 0px;
+	border: solid;
+	border-width: 1px;
+	border-color: #696969;
+	background-color: #D3D3D3;
+}
+
+/* Format the placeholder text in the search bar */
+.searchBox> input::placeholder{
+	padding-left: 5px;
+	font-size: 10px;
+	color: #808080;
+}
+
+/* Formatting for the contact us link in the menu */
+.menuContact{
+	position: absolute;
+	padding: 20px;
+	top: 100px;
+	right: 10px;
+	width: 100px;
+	background-image: radial-gradient(#297A15, #33991A, #33991A);
+}
+
+.menuContact> a{
+	display: flex;
+	width: inherit;
+	height: inherit;
+	color: #000000;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+.menuContact> a:hover{
+	text-decoration: underline;
+}
+
+.menu:hover .menuContent{
+	display: block;
+	z-index: 1;
+}
+
+/* Formatting for the nav bar */
+nav{
+	height: 44px;
+}
+
+/* Links change colour gradually when hovered over */
+nav> div> a{
+	display: flex;
+	border: solid;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-color: #000000;
+	background-color: #FFFFFF;
+	color: #000000;
+	text-decoration: none;
+	width: 237.5px;
+	height: 40px;
+	float: left;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+}
+
+.firstLink> a{
+	border-left-width: 2px;
+	border-bottom-left-radius: 20px;
+}
+
+.fourthLink> a{
+	border-right-width: 2px;
+}
+
+/* Formatting for the dropdown menus */
+nav> div> ul{
+	list-style-type: none;
+	position: absolute;
+	padding: 0px;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.5s;
+}
+
+.secondLink> ul{
+	margin: 44px 0px 0px 240px;
+}
+
+/* Formatting here much the same as for links that are shown all the time. Links in dropdowns expand their size on hover - this is part of the transition */
+nav> div> ul> li> a{
+	display: flex;
+	width: 240px;
+	height: 0px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	justify-content: center;
+	align-items: center;
+	font-size: 13px;
+	z-index: 1;
+	transition-property: background-color;
+	transition-property: height;
+	transition-duration: 0.5s;
+}
+
+/* This creates a line between different links in the dropdown menus */
+.border{
+	border-top: solid;
+	border-top-width: 1px;
+}
+
+/* Show the dropdown menus and their transitions when its parent nav link is hovered over */
+nav> div:hover> a{
+	background-color: #D3D3D3;
+}
+
+nav> div:hover> ul{
+	opacity: 1;
+}
+
+nav> div:hover> ul> li> a{
+	background-color: #E9E9E9;
+	height: 40px;
+}
+
+/* Formatting for the main. This differs from page to page */
+main{
+	font-family: "alata";
+	padding: 20px 30px 20px 30px;
+}
+
+/* Formatting for the home page */
+/* Formatting for the about us section on the home page. Every article on the home page has different formatting */
+#aboutUs> section> img{
+	float: right;
+	width: 400px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+/* Formatting for the gallery link */
+#aboutUs> section> a{
+	display: flex;
+	align-items: center;
+	position: relative;
+	text-decoration: none;
+	color: #000000;
+	width: 250px;
+	height: 25px;
+	font-size: 20px;
+	margin-left: 600px;
+	bottom: 10px;
+}
+
+/* When the link is hovered over, move the arrow to the right with a transition */
+#aboutUs> section> a> p{
+	position: relative;
+	margin-left: 5px;
+	transition-property: margin-left;
+	transition-duration: 0.5s;
+}
+
+#aboutUs> section> a:hover> p{
+	margin-left: 15px;
+}
+
+/* Formatting for the blog on the home page */
+/* Transition applies when the user expands the size of the blog */
+#blogContainer{
+	position: relative;
+	padding: 20px;
+	border-top: solid;
+	border-right: solid;
+	border-left: solid;
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	overflow: auto;
+	height: 250px;
+	transition-property: height;
+	transition-duration: 1s;
+}
+
+/* This is the line at the bottom of all the blog posts */
+#blogContainer> div{
+	border: solid;
+	border-width: 0.5px;
+	margin: 75px 20px 10px 20px;
+}
+
+#blogContainer> p{
+	margin: 0px 0px 0px 40px;
+}
+
+/* Formatting for all blog posts is the same */
+#blogContainer> article{
+	position: relative;
+}
+
+.blogPost{
+	margin-top: 50px;
+	display: inline-block;
+}
+
+.postTitle{
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.postTitle> h3{
+	float: left;
+	margin-right: 20px;
+}
+
+.postTitle> p{
+	margin: 3px 0px 0px 0px;
+	color: #D3D3D3;
+}
+
+.postContent> img{
+	float: right;
+	width: 30%;
+	margin: 0px 0px 10px 20px;
+}
+
+/* Formatting for the buttons that control the size of the blog. This section uses javascript */
+#changeBlogSize{
+	position: relative;
+	display: flex;
+	width: inherit;
+	border-right: solid;
+	border-bottom: solid;
+	border-left: solid;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 2px;
+	height: 90px;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Formatting for the button that expands the blog. This is hidden when the blog is expanded */
+#expandBlog{
+	position: relative;
+	height: 50px;
+	cursor: pointer;
+}
+
+#expandBlog> p{
+	margin: 0px;
+}
+
+/* This image is the arrow that shows the direction the blog will expand in. It moves up when hovered over */
+#expandBlog> img{
+	position: absolute;
+	left: 30.256px;
+	top: 25px;
+	transition-property: top;
+	transition-duration: 0.5s;
+}
+
+#expandBlog:hover> img{
+	top: 35px;
+}
+
+/* Formatting for the button that reduces the blog. This is hidden when the blog is reduced */
+#reduceBlog{
+	display: none;
+	position: relative;
+	height: 50px;
+	width: 79.53px;
+	cursor: pointer;
+}
+
+#reduceBlog> p{
+	position: absolute;
+	bottom: 5px;
+	margin: 0px;
+	width: inherit;
+	text-align: center;
+}
+
+#reduceBlog> img{
+	position: absolute;
+	left: 30.256px;
+	top: 12px;
+	transition-property: top;
+	transition-duration: 0.5s;
+}
+
+#reduceBlog:hover> img{
+	top: 2px;
+}
+
+/* Formatting for articles on every other major page is the same for each article. Images are floated left or right within articles depending on the path to the image. On the page, they alternate */
+.otherPage> article{
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.otherPage> article> img{
+	float: left;
+	width: 350px;
+	margin: 0px 20px 10px 0px;
+}
+
+.otherPage> article> section> img{
+	float: right;
+	width: 350px;
+	margin: 0px 0px 10px 20px;
+}
+
+/* Formatting for quotes. These appear as an interruption to the norm, spanning the entire width of the main */
+.quote{
+	margin: 15px 10px 5px 10px;
+	border-top: solid;
+	border-top-width: 1px;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-color: #D3D3D3;
+}
+
+.quote> p{
+	text-align: center;
+	color: #606060;
+}
+
+/* Formatting for the minor past projects page */
+#pastProjects{
+	position: relative;
+	height: 603.25px;
+}
+
+/* The left column of this page contains dates. The date's height's are individually set to the height of their corresponding article in the right column */
+#leftColumn{
+	float: left;
+	width: 150px;
+	border-right: solid;
+	border-right-width: 3px;
+}
+
+#leftColumn> p{
+	text-align: right;
+	margin: 5px 20px 0px 0px;
+}
+
+#nineAugTwenty{
+	height: 406.33px;
+}
+
+/* The right column of this page contains information on what happened on their corresponding date */
+#rightColumn{
+	float: right;
+	width: 710px;
+	margin-bottom: 20px;
+}
+
+#rightColumn> article> img{
+	float: right;
+	width: 350px;
+	margin: 0px 0px 10px 20px;
+}
+
+/* Formatting for the text saying there are no more projects before June 2020 */
+#endPastProjects{
+	margin: 0px 0px 0px 200px;
+}
+
+/* Formatting for the footer. This is the same for every page */
+footer{
+	position: relative;
+	width: inherit;
+	height: 50px;
+	font-family: "alata";
+	background-color: #3BAE1E;
+	transition-property: height;
+	transition-duration: 0.5s;
+}
+
+/* This is always shown. It contains the facebook link, and copyright and quicklinks messages (in order of styling below) */
+.shownAlways{
+	width: inherit;
+	height: 50px;
+	background-color: #33991A;
+}
+
+.shownAlways> a> img{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 30px;
+	border-radius: 8px;
+	z-index: 1;
+}
+
+.shownAlways> p{
+	position: absolute;
+	height: 50px;
+	width: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px;
+	cursor: default;
+}
+
+.shownAlways> div{
+	position: absolute;
+	height: 50px;
+	right: 75px;
+	cursor: pointer;
+}
+
+.shownAlways> div> p{
+	margin: 3px 0px 0px 0px;
+}
+
+/* Quicklinks arrow moves down with a transition when it is hovered over */
+.shownAlways> div> img{
+	position: absolute;
+	left: 28.03px;
+	top: 25px;
+	transition-property: top;
+	transition-duration: 0.5s;
+}
+
+.shownAlways> div:hover> img{
+	top: 35px;
+}
+
+/* This content is shown when the footer is hovered over. This is done by altering the height of the footer. When not hovered over the height of the content and all child elements is set to 0. This allows for a transition */
+.footerContent{
+	overflow: hidden;
+	top: 0px;
+	opacity: 0;
+	position: absolute;
+	height: 0px;
+	width: inherit;
+	transition-property: opacity;
+	transition-property: height;
+	transition-duration: 0.5s;
+}
+
+/* Formatting for the Onslow logo */
+.footerContent> a> img{
+	position: relative;
+	float: left;
+	width: 100px;
+	top: 25px;
+	left: 25px;
+	margin-right: 50px;
+	height: 0px;
+	transition-property: height;
+	transition-duration: 0.5s;
+}
+
+/* Formatting for the quicklinks in the footer */
+.footerContent> .siteMap{
+	position: relative;
+	float: left;
+	margin-top: 15px;
+	height: 0px;
+	transition-property: height;
+	transition-duration: 0.5s;
+}
+
+.footerContent> .siteMap> a{
+	display: block;
+	width: 100px;
+	margin-right: 35px;
+	height: 0px;
+	color: #000000;
+	font-size: 18px;
+	text-decoration: none;
+	transition-property: height;
+	transition-duration: 0.5s;
+}
+
+.footerContent> .siteMap> a:hover{
+	text-decoration: underline;
+}
+
+.footerContent> .siteMap> ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	height: 0px;
+	transition-property: height;
+	transition-property: margin;
+	transition-duration: 0.5s;
+}
+
+.footerContent> .siteMap> ul> li{
+	height: 0px;
+	transition-property: height;
+	transition-duration: 0.5s;
+}
+
+.footerContent> .siteMap> ul> li> a{
+	color: #000000;
+	text-decoration: none;
+	height: 0px;
+	margin: 0px;
+	font-size: 0px;
+	transition-property: height;
+	transition-property: margin;
+	transition-duration: 0.5s;
+}
+
+.footerContent> .siteMap> ul> li> a:hover{
+	text-decoration: underline;
+}
+
+/* Formatting for the contact us link */
+.footerContact{
+	position: absolute;
+	right: 25px;
+	height: 0px;
+	transition-property: height;
+	transition-duration: 0.5s;
+}
+
+.footerContact> a{
+	display: block;
+	margin-top: 15px;
+	color: #000000;
+	text-decoration: none;
+	font-size: 18px;
+	height: 0px;
+	transition-property: height;
+	transition-duration: 0.5s;
+}
+
+.footerContact> a:hover{
+	text-decoration: underline;
+}
+
+.footerContact> p{
+	height: 0px;
+	margin: 0px;
+	transition-property: height;
+	transition-property: margin;
+	transition-duration: 0.5s;
+}
+
+/* When the footer is hovered over, increase the height of all elements in the footer with a transition */
+footer:hover{
+	height: 200px;
+}
+
+footer:hover> .shownAlways{
+	border-bottom: solid;
+	border-bottom-width: 2px;
+}
+
+footer:hover> .footerContent{
+	top: 50px;
+	opacity: 1;
+	height: 148px;
+}
+
+footer:hover> .footerContent> a> img{
+	height: 100px;
+}
+
+footer:hover> .footerContent> .siteMap{
+	height: 76px;
+}
+
+footer:hover> .footerContent> .siteMap> a{
+	height: 30px;
+}
+
+footer:hover> .footerContent> .siteMap> ul{
+	height: 22px;
+	margin-top: 10px;
+}
+
+footer:hover> .footerContent> .siteMap> ul> li{
+	height: 22px;
+}
+
+footer:hover> .footerContent> .siteMap> ul> li> a{
+	height: 22px;
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+
+footer:hover> .footerContent> .footerContact{
+	height: 94px;
+}
+
+footer:hover> .footerContent> .footerContact> a{
+	height: 22px;
+}
+
+footer:hover> .footerContent> .footerContact> p{
+	height: 22px;
+	margin-top: 16px;
+}

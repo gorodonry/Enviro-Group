@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "description" content = "Home page of the Onslow Enviro Group, designed by Ryan Gordon.">
+		<link href = "css/style.css" rel = "stylesheet">
+		<link href = "images/onslow_logo.png" rel = "icon">
+		<script src = "javascript/script.js"></script>
+		<title>Onslow Enviro Group | Home</title>
+	</head>
+	<body>
+		<header>
+			<!-- All formatting within this element is positioned over the header image -->
+			<div class = "headerImage">
+				<div class = "menu">
+					<!-- Hamburger menu icon -->
+					<div class = "visible">
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<!-- This apears when a user hovers over the hamburger menu icon -->
+					<div class = "menuContent">
+						<!-- Quicklinks to other pages -->
+						<div class = "siteMap">
+							<a href = "index.html">Home</a>
+						</div>
+						<div class = "siteMap">
+							<a href = "projects.html">Projects</a>
+							<ul>
+								<li><a href = "past_projects.html">- Past projects</a></li>
+							</ul>
+						</div>
+						<div class = "siteMap">
+							<a href = "at_home.html">At home</a>
+							<ul>
+								<li><a href = "at_home.html#pest_control">- Pest control</a></li>
+								<li><a href = "at_home.html#native_species">- Native Species</a></li>
+							</ul>
+						</div>
+						<div class = "siteMap">
+							<a href = "why.html">Why?</a>
+						</div>
+						<!-- Search box (accepts text input but doesn't search) -->
+						<div class = "searchBox">
+							<div class = "searchIcon">
+								<img src = "images/search_icon.jpg" alt = "Q">
+							</div>
+							<input class = "searchPlaceholder" type = "text" name = "searchPlaceholder" placeholder = "Type here...">
+						</div>
+						<div class = "menuContact">
+							<a href = "index.html#contact">Contact Us</a>
+						</div>
+					</div>
+				</div>
+				<a href = "index.html"><h1>Onslow Enviro Group</h1></a>
+			</div>
+			<!-- Nav bar - this is positioned below the header image -->
+			<nav>
+				<div class = "firstLink">
+					<a href = "index.html">HOME</a>
+				</div>
+				<div class = "secondLink">
+					<a href = "projects.html">PROJECTS</a>
+					<ul>
+						<li><a href = "past_projects.html">PAST PROJECTS</a></li>
+					</ul>
+				</div>
+				<div class = "thirdLink">
+					<a href = "at_home.html">AT HOME</a>
+				</div>
+				<div class = "fourthLink">
+					<a href = "why.html">WHY?</a>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<!-- Article about the Enviro Group. The image is floated right -->
+			<article id = "aboutUs">
+				<h2>About Us</h2>
+				<section>
+					<img src = "images/two_students_planting.jpg" alt = "Two students planting a plant">
+					<p>Welcome to the Onslow Enviro Group webpage!<br><br>We are all about the promotion of environmental sustainability within our community. This is key to a positive, functional environment - one that isn't being swamped by rubbish or climate change.<br><br>The Onslow Enviro Group brings together students and staff who are concerned about issues impacting our environment and who are committed to promoting positive change in our community. We work together to promote our aims through advocacy, fundraising and school projects. We facilitate inclusive practice and promote the development of student leaders with our various projects each having students overseeing the work.<br><br>Check out our blog below for recent and upcoming activity. Our latest goal is the reintroduction of native birds and lizards to Onslow and the renovation of Table Mountain for the purpose of providing sheltered places for plants, animals, and people on Table Mountain.<br><br>Let your friends know about us - the more people we get on board the better the environment will be in the years to come.</p>
+					<a href = "gallery.html">Visit the Enviro Gallery <p>&#10095;</p></a>
+				</section>
+			</article>
+			<article>
+				<h2>Blog</h2>
+				<!-- This is my blog. Posts have to be added directly to the markup -->
+				<div id = "blogContainer">
+					<!-- Each post has a title, an image floated right, and a body of text. The css is the same for every post -->
+					<article id = "firstPost">
+						<section class = "postTitle">
+							<h3>Election Promises</h3>
+							<p>Posted on 13<sup>th</sup> September 2020 @10:23am</p>
+						</section>
+						<section class = "postContent">
+							<img src = "images/blog_post_1_img.jpg" alt = "Go sustainability!">
+							<p>Informative and unbiased page on environmental party policies for the upcoming election. Of note, the Greens are the only major party with a comprehensive and sensible environmental outlook. A trend I noticed was that the further towards the right of the political spectrum a party is, the more environmentally harmful it seems to get. Link to the website can be found <a href = "https://policy.nz/topic/Environment#Emissions%20reduction">here</a>.<br><br>Although most of you won't be able to vote in the election, I though it would be cool for you to understand NZ's party's policies towards the environment. This will help with making an informed decision when you are eligible to vote (if not already) and provide you with some insight into the immediate future depending on who gets elected.</p>
+						</section>
+					</article>
+					<article class = "blogPost">
+						<section class = "postTitle">
+							<h3>Working Bee</h3>
+							<p>Posted on 12<sup>th</sup> August 2020 @5:17pm</p>
+						</section>
+						<section class = "postContent">
+							<img src = "images/blog_post_2_img.jpg" alt = "Revegetation plantation.">
+							<p>Thank you to all those who attended last Sunday's working bee. Between us we planted up about 500 trees around Waipahihi. Awesome effort - Make sure to come back in 20 years and see the resultant forest!<br><br>However, with planting comes weeding, a necessary evil to ensure the survival of our plantation. We plan on recruiting volunteers to spend half an hour every fortnight or so to weed the revegetated area. Email <a href = "mailto:enviro@onslow.school.nz?subject=Weeding%20August%209%20Reveg">enviro@onslow.school.nz</a> if you are interested in helping out with this.<br><br>Right: a photo of the newly revegetated area.</p>
+						</section>
+					</article>
+					<article class = "blogPost">
+						<section class = "postTitle">
+							<h3>Plant of the Season</h3>
+							<p>Posted on 27<sup>th</sup> June 2020 @2:15pm</p>
+						</section>
+						<section class = "postContent">
+							<img src = "images/blog_post_3_img.jpg" alt = "Drawing of ranunculus gracilipes." title = "Drawing of rununculus gracilipes by Eleanor Burton.">
+							<p>Otari Wilton Bush Trust's plant of the season for this winter is <em>ranunculus gracilipes</em> (no common name). For those of you who don't know, 'montane' forest is forest found between 300 and 800 metres above sea level.<br><br><br><strong><em>Ranunculus  gracilipes</em></strong><br><br>This is a plant of higher montane to subalpine grassland and herbfield, found in the South and Stewart Islands. I collected the illustrated specimen (as seed) two years ago from the Remarkables, as Chaerophyllum colensoi, and it happily masqueraded as C. colensoi in the nursery until recently when it flowered.<br><br>Drawing and blurb credit: Eleanor Burton.</p>
+						</section>
+					</article>
+					<article class = "blogPost">
+						<section class = "postTitle">
+							<h3>Revegetation</h3>
+							<p>Posted on 13<sup>th</sup> June 2020 @4:13pm</p>
+						</section>
+						<section class = "postContent">
+							<p>As we can now have gatherings of more than one hundred people under the COVID-19 alert level guidelines (hooray!), we can start holding working bees for revegetation again. Our next working bee will be on the 9<sup>th</sup>August 2020 at 1 in the afternoon. As we are operating under level 2 we are capping numbers at 50 people. Email <a href = "mailto:enviro@onslow.school.nz?subject=August%209%20Working%20Bee">enviro@onslow.school.nz</a> if you are interested in attending so that we can control numbers. Hope to see you all there!</p>
+						</section>
+					</article>
+					<div></div>
+					<p>All posts beyond this point have been archived.</p>
+				</div>
+				<!-- These buttons expand and reduce the blog size respectively. Only one is shown at a time -->
+				<div id = "changeBlogSize">
+					<div id = "expandBlog" onclick = "toggleBlogSize()">
+						<p>Show More</p>
+						<img src = "images/down_arrow.png" alt = "v">
+					</div>
+					<div id = "reduceBlog" onclick = "toggleBlogSize()">
+						<img src = "images/up_arrow.png" alt = "^">
+						<p>Show Less</p>
+					</div>
+				</div>
+			</article>
+			<!-- Contact us article. This section id very straightforward -->
+			<article id = "contact">
+				<h2>Contact Us</h2>
+				<section>
+					<p>We value your help. Feel free to email us at <a href = "mailto:enviro@onslow.school.nz?subject=Contact%20from%20Website">enviro@onslow.school.nz</a> with any queries or suggestions, or contact Jan Szydlowski (Mr. Sid is fine), teacher in charge of the Enviro Group.</p>
+				</section>
+			</article>
+		</main>
+		<footer>
+			<!-- Content always visible at the bottom of the page, contains link to facebook page and copyright information -->
+			<div class = "shownAlways">
+				<a href = "https://www.facebook.com/onslowenvirogroup/"><img src = "images/facebook_logo.png" alt = "Facebook logo."></a>
+				<p>&#169; 2020 Onslow Enviro Group</p>
+				<div>
+					<p>Quicklinks</p>
+					<img src = "images/down_arrow.png" alt = "v">
+				</div>
+			</div>
+			<!-- This content appears when the mouse hovers over the footer -->
+			<div class = "footerContent">
+				<!-- Link to Onslow College website -->
+				<a href = "https://www.onslow.school.nz"><img src = "images/onslow_logo.png" alt = "Onslow logo"></a>
+				<!-- Quicklinks to other pages -->
+				<div class = "siteMap">
+					<a href = "index.html">Home</a>
+				</div>
+				<div class = "siteMap">
+					<a href = "projects.html">Projects</a>
+					<ul>
+						<li><a href = "past_projects.html">- Past projects</a></li>
+					</ul>
+				</div>
+				<div class = "siteMap">
+					<a href = "at_home.html">At home</a>
+					<ul>
+						<li><a href = "at_home.html#pest_control">- Pest control</a></li>
+						<li><a href = "at_home.html#native_species">- Native Species</a></li>
+					</ul>
+				</div>
+				<div class = "siteMap">
+					<a href = "why.html">Why?</a>
+				</div>
+				<!-- Contact information -->
+				<div class = "footerContact">
+					<a href = "index.html#contact">Contact Us</a>
+					<p>Email: <a href = "mailto:enviro@onslow.school.nz?subject=Contact%20from%20Website">enviro@onslow.school.nz</a>.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
